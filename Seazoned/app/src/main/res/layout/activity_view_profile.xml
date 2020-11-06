@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/lnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_left" />
+                </LinearLayout>
+
+                <com.seazoned.customtext.Custom_Text_View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/profiledetails"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <android.support.v4.widget.NestedScrollView
+                android:fillViewport="true"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="75dp"
+                            android:background="@color/colorWhite"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/profilebanner">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="bottom|center">
+
+                            <com.github.siyamed.shapeimageview.CircularImageView
+                                android:id="@+id/ivProfilePic"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/temp"
+                                android:visibility="visible"
+                                app:siBorderColor="#dadada"
+                                app:siBorderWidth="3dp" />
+                            <ImageView
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:scaleType="fitXY"
+                                android:visibility="gone"
+                                android:layout_gravity="bottom|center"
+                                android:src="@mipmap/opacityimguploadbg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:id="@+id/tvProfilePic"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_gravity="bottom|center"
+                                android:background="@mipmap/opacityimguploadbg"
+                                android:gravity="center"
+                                android:text="Change"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+
+                        </FrameLayout>
+
+                    </FrameLayout>
+
+                    <com.seazoned.customtext.Custom_Text_View_SemiBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:id="@+id/tvName"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <com.seazoned.customtext.Custom_Text_View_SemiBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="@string/dateofbirth"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <com.seazoned.customtext.Custom_Text_View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/tvDateOfBirth"
+                        android:textColor="@color/colorProfileText"
+                        android:textSize="14sp" />
+
+                    <com.seazoned.customtext.Custom_Text_View_SemiBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="Phone Number"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <com.seazoned.customtext.Custom_Text_View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/tvNumber"
+                        android:textColor="@color/colorProfileText"
+                        android:textSize="14sp" />
+                    <com.seazoned.customtext.Custom_Text_View_SemiBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="Email"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <com.seazoned.customtext.Custom_Text_View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/tvEmail"
+                        android:textColor="@color/colorProfileText"
+                        android:textSize="14sp" />
+                    <com.seazoned.customtext.Custom_Text_View_SemiBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="Address"
+                        android:visibility="gone"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp" />
+
+                    <com.seazoned.customtext.Custom_Text_View
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="city, state, country"
+                        android:textColor="@color/colorProfileText"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+            <com.seazoned.customtext.Custom_Text_View_SemiBold
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/green_gradient_round"
+                android:gravity="center"
+                android:text="@string/editproofile"
+                android:id="@+id/tvEditProfile"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/footerFragment"
+            android:name="com.seazoned.view.fragment.FootrFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout="@layout/footer_fragment" />
+
+    </LinearLayout>
+
+</layout>

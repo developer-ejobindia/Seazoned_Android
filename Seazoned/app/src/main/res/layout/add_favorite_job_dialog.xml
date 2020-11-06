@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="32dp"
+    android:paddingBottom="32dp"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <com.seazoned.customtext.Custom_Text_View_SemiBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Add as a favorite job?"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:layout_marginBottom="48dp"/>
+    <!---->
+
+
+
+
+    <!---->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.seazoned.customtext.Custom_Text_View_SemiBold
+            android:id="@+id/tvCancel"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/grey_round"
+            android:gravity="center"
+            android:text="Cancel"
+            android:layout_marginRight="24dp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorText"
+            android:textSize="15sp" />
+        <com.seazoned.customtext.Custom_Text_View_SemiBold
+            android:id="@+id/tvOk"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/green_gradient_round"
+            android:gravity="center"
+            android:text="Ok"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

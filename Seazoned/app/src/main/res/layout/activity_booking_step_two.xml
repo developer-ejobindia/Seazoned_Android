@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/lnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_left" />
+                </LinearLayout>
+
+                <com.seazoned.customtext.Custom_Text_View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Booking"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <com.seazoned.customtext.Custom_Text_View_SemiBold
+                    android:id="@+id/tvUpperContinue"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/green_gradient_round_corner"
+                    android:drawableRight="@drawable/ic_right_arrow"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="8dp"
+                    android:text="Confirm"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingTop="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorAddressBookBg"
+                            android:orientation="horizontal"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp">
+
+                            <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Select Frequency"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rcvFrequency"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#cfcece">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                        <com.seazoned.customtext.Custom_Text_View_Bold
+                            android:id="@+id/tvFrequencyAlert"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:gravity="center"
+                            android:text="No data found."
+                            android:textColor="@color/colorText"
+                            android:textSize="18sp"
+                            android:visibility="gone" />
+                        <!--fill service details-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorAddressBookBg"
+                            android:orientation="horizontal"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:visibility="visible">
+
+                            <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Fill Service Details"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <!---->
+                        <!---->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <com.seazoned.customtext.Custom_Text_View_Bold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Select service date"
+                                    android:textColor="@color/colorLabel"
+                                    android:textSize="14sp" />
+
+                                <com.seazoned.customtext.Custom_Text_View
+                                    android:id="@+id/tvDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:background="@color/colorWhite"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="1"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="14sp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@color/colorUnderLine" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical">
+
+                                <com.seazoned.customtext.Custom_Text_View_Bold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Preferred Time"
+                                    android:textColor="@color/colorLabel"
+                                    android:textSize="14sp" />
+
+                                <com.seazoned.customtext.Custom_Text_View
+                                    android:id="@+id/tvTime"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:background="@color/colorWhite"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="1"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="14sp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@color/colorUnderLine" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:src="@drawable/ic_info" />
+
+                                <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Preferred time is only a preference as service providers may be working other Seazoned jobs at that time"
+                                    android:textColor="@color/colorLabel"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical">
+
+                                <com.seazoned.customtext.Custom_Text_View_Bold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anything more you would like your provider to know?"
+                                    android:textColor="@color/colorLabel"
+                                    android:textSize="14sp" />
+
+                                <com.seazoned.customtext.Custom_EditText
+                                    android:id="@+id/etMessage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dp"
+                                    android:layout_marginTop="3dp"
+                                    android:background="@drawable/gray_squre_shape"
+                                    android:gravity="top|left"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="16sp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical">
+
+                                <com.seazoned.customtext.Custom_Text_View_Bold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Have a pic for your service ptovider? Attach here"
+                                    android:textColor="@color/colorLabel"
+                                    android:textSize="14sp" />
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/rcvImageList"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#f3f3f3">
+
+                                </android.support.v7.widget.RecyclerView>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorAddressBookBg"
+                            android:orientation="horizontal"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp">
+
+                            <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Card List"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="13sp" />
+
+                            <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                android:id="@+id/tvCardList"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawableLeft="@drawable/ic_add"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Add New Card"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorAddressBookBg"
+                            android:orientation="horizontal"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp">
+
+                            <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Service Address"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="13sp" />
+
+                            <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                android:id="@+id/tvAddAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawableLeft="@drawable/ic_add"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="10dp"
+                                android:text="Add New Address"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rcvAddressList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                        <com.seazoned.customtext.Custom_Text_View_SemiBold
+                            android:id="@+id/tvAlert"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text="No address found."
+                            android:textColor="@color/colorText"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/gray_squre_shape"
+                            android:orientation="vertical">
+                            <!--start price-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="15dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="15dp">
+
+                                    <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Price Details"
+                                        android:textColor="@color/colorLabel"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/colorUnderLine" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="15dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="15dp">
+
+                                    <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                        android:id="@+id/tvServiceType"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Single"
+                                        android:textColor="@color/colorLabel"
+                                        android:textSize="14sp" />
+
+                                    <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                        android:id="@+id/tvServicePrice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="$ 0.00"
+                                        android:textColor="@color/colorLabel"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/colorUnderLine" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="15dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="15dp">
+
+                                    <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Tax Rate"
+                                        android:textColor="@color/colorText"
+                                        android:textSize="14sp" />
+
+                                    <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                        android:id="@+id/tvTax"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="$ 0.00 %"
+                                        android:textColor="@color/colorText"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/colorUnderLine" />
+                            </LinearLayout>
+                            <!--end price-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorUnderLine"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingBottom="15dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="15dp">
+
+                                <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Grand Total"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="14sp" />
+
+                                <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                    android:id="@+id/tvGrandTotal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$ 0.00"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorUnderLine" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.seazoned.customtext.Custom_Text_View_SemiBold
+                        android:id="@+id/tvContinue"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/green_gradient_round"
+                        android:gravity="center"
+                        android:text="Confirm"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/footerFragment"
+            android:name="com.seazoned.view.fragment.FootrFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout="@layout/footer_fragment" />
+
+    </LinearLayout>
+
+</layout>

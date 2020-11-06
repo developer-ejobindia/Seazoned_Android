@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/lnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_left" />
+            </LinearLayout>
+
+            <com.seazoned.customtext.Custom_Text_View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Back To List"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <com.seazoned.customtext.Custom_Text_View_SemiBold
+                android:id="@+id/tvUpperBookNow"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/green_gradient_round_corner"
+                android:drawableRight="@drawable/ic_right_arrow"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:text="Book Now"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                    <ImageView
+                        android:id="@+id/ivFeatureImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/feature_image" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/black_opacity">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.github.siyamed.shapeimageview.CircularImageView
+                                android:id="@+id/ivProfileId"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/temp"
+                                app:siBorderAlpha="0"
+                                app:siBorderWidth="2dp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <com.seazoned.customtext.Custom_Text_View_Bold
+                                    android:id="@+id/gardenAssistanceTeamId"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="5dp"
+                                    android:text=""
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:id="@+id/ivFavorite"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:src="@drawable/ic_favourite" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                    android:id="@+id/addressId"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableLeft="@drawable/ic_navigate"
+                                    android:drawablePadding="10dp"
+                                    android:text=""
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/green_gradient_round_corner"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="5dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingTop="5dp">
+
+                                    <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                        android:id="@+id/overallRating"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dp"
+                                        android:text=""
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="16sp" />
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/ic_star_fill" />
+                                </LinearLayout>
+
+                                <com.seazoned.customtext.Custom_Text_View
+                                    android:id="@+id/ratingsAndReviewsId"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="(0 ratings and 0 review)"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <com.seazoned.customtext.Custom_Text_View_SemiBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Description"
+                                android:textColor="@color/colorLabel"
+                                android:textSize="16sp" />
+
+                            <com.seazoned.customtext.Custom_Text_View
+                                android:id="@+id/descriptionId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text=""
+                                android:textColor="@color/colorLabel"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <com.seazoned.customtext.Custom_Text_View_SemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Service Hours"
+                            android:textColor="@color/colorFlatRed"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:id="@+id/lnServiceHours"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorUnderLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="vertical">
+
+                        <com.seazoned.customtext.Custom_Text_View_SemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Previous work images"
+                            android:textColor="@color/colorFlatRed"
+                            android:textSize="16sp" />
+
+
+                        <!--commented out by me kamalika-->
+
+
+                        <!--<FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="20dp">
+
+                            <ImageView
+                                android:id="@+id/imgDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@mipmap/featurepic"
+                                android:scaleType="centerCrop" />
+                            <android.support.v4.view.ViewPager
+                                android:id="@+id/vpImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:visibility="gone" />
+                        </FrameLayout>-->
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rcvImageSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:visibility="gone">
+                        </android.support.v7.widget.RecyclerView>
+                        <com.seazoned.customtext.Custom_Text_View
+                            android:id="@+id/tvNoDataFoundSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:visibility="gone"
+                            android:text="No Image Found"
+                            android:gravity="center" />
+
+                       <!-- <LinearLayout
+                                android:layout_width="50dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="left|center_vertical"
+                                android:background="#75ffffff"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_left_bold" />
+
+                            </LinearLayout> -->
+
+                        <!--    <LinearLayout
+                                android:layout_width="50dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:background="#75ffffff"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_right_bold" />
+
+                            </LinearLayout> -->
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="20dp">
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+
+                            <com.seazoned.customtext.Custom_Text_View_Bold
+                                android:id="@+id/overallRatingAgain"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4.5"
+                                android:textColor="@color/colorProgress"
+                                android:textSize="30sp" />
+                            </LinearLayout>
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="4"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.seazoned.customtext.Custom_Text_View_Bold
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:textSize="16sp"
+                                    android:text="5"
+                                    />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:src="@drawable/ic_blackstar" />
+
+                                <ProgressBar
+                                    android:id="@+id/progressBar5"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressTint="#307A33"
+                                    android:minHeight="6dp"
+                                    android:minWidth="150dp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.seazoned.customtext.Custom_Text_View_Bold
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:textSize="16sp"
+                                    android:text="4"
+                                    />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:src="@drawable/ic_blackstar" />
+
+                                <ProgressBar
+                                    android:id="@+id/progressBar4"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressTint="#48934b"
+                                    android:minHeight="6dp"
+                                    android:minWidth="150dp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.seazoned.customtext.Custom_Text_View_Bold
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:textSize="16sp"
+                                    android:text="3"
+                                    />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:src="@drawable/ic_blackstar" />
+
+                                <ProgressBar
+                                    android:id="@+id/progressBar3"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressTint="#75ce78"
+                                    android:minHeight="6dp"
+                                    android:minWidth="150dp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.seazoned.customtext.Custom_Text_View_Bold
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:textSize="16sp"
+                                    android:text="2"
+                                    />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:src="@drawable/ic_blackstar" />
+
+                                <ProgressBar
+                                    android:id="@+id/progressBar2"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressTint="#ee8528"
+                                    android:minHeight="6dp"
+                                    android:minWidth="150dp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.seazoned.customtext.Custom_Text_View_Bold
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:textSize="16sp"
+                                    android:text="1"
+                                    />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:src="@drawable/ic_blackstar" />
+
+                                <ProgressBar
+                                    android:id="@+id/progressBar1"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressTint="#e62721"
+                                    android:minHeight="6dp"
+                                    android:minWidth="150dp" />
+
+                            </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rcvRatingList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <com.seazoned.customtext.Custom_Text_View_SemiBold
+                    android:id="@+id/tvBookNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_gradient_round"
+                    android:gravity="center"
+                    android:text="@string/book_now"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/footerFragment"
+        android:name="com.seazoned.view.fragment.FootrFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout="@layout/footer_fragment" />
+
+</LinearLayout>
+
+</layout>

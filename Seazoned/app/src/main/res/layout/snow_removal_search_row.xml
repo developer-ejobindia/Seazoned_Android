@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/lnSnowRemoval"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.seazoned.customtext.Custom_Text_View_Bold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How many cars would fit in your drive way"
+            android:textSize="14sp"
+            android:textColor="@color/colorLabel"/>
+
+        <Spinner
+            android:spinnerMode="dialog"
+            android:layout_marginTop="10dp"
+            android:id="@+id/sp_car"
+            android:layout_width="300dp"
+            android:layout_height="40dp"></Spinner>
+
+        <com.seazoned.customtext.Custom_Text_View_Bold
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driveway type"
+            android:textSize="14sp"
+            android:textColor="@color/colorLabel"/>
+        <Spinner
+            android:spinnerMode="dialog"
+            android:layout_marginTop="10dp"
+            android:id="@+id/sp_drive_type"
+            android:layout_width="300dp"
+            android:layout_height="40dp"></Spinner>
+
+
+
+        <com.seazoned.customtext.Custom_Text_View_Bold
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Additional services?"
+            android:textSize="14sp"
+            android:textColor="@color/colorLabel"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/lnServices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+        <Spinner
+            android:visibility="gone"
+            android:spinnerMode="dialog"
+            android:layout_marginTop="10dp"
+            android:id="@+id/sp_service"
+            android:layout_width="300dp"
+            android:layout_height="40dp"></Spinner>
+
+
+    </LinearLayout>
+</layout>

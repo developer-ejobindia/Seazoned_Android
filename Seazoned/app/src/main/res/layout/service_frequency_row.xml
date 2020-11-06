@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/lnMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.seazoned.customtext.Custom_Text_View
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recurring Service"
+                android:textColor="@color/colorLabel"
+                android:textSize="14sp" />
+
+            <com.seazoned.customtext.Custom_Text_View_Bold
+                android:id="@+id/tvDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Every 7 Days"
+                android:textColor="@color/colorText"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.seazoned.customtext.Custom_Text_View_SemiBold
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/colorFlatRed"
+                    android:textSize="20sp" />
+
+                <com.seazoned.customtext.Custom_Text_View
+                    android:id="@+id/tvPerService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="per Service"
+                    android:textColor="@color/colorLabel"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="right|top"
+            android:src="@drawable/ic_correct_symbol" />
+    </FrameLayout>
+
+</layout>
